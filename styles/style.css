@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor-azul: #22D4F4;
+    --cor-preta: black;
+    --cor-branca: white;
+
+    --fonte-primaria: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+    background-image: url('uv.png');
+    background-position: center, center;
+    background-repeat: repeat-y;
+    background-attachment: scroll, scroll;
+    background-color: var(--cor-preta);
+    color: var(--cor-branca);
+    background-size: 100%;
+  }
+.cabecalho {
+    padding: 5% 0% 0% 25% ;
+}
+.cabecalho__menu {
+    display: flex;
+    padding: 15px;
+    gap: 25px;
+}
+.cabecalho__menu__link {
+    font-family: var(--fonte-primaria);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--cor-branca);
+    text-decoration: none;
+}
+.panfleto {
+    padding: 8% 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px
+}
+.panfleto__conteudo {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.panfleto__conteudo__titulo {
+    font-size: 1.90rem;
+    font-family: var(--fonte-primaria);
+} 
+.titulo-destaque {
+    color: var(--cor-azul)
+  }
+.panfleto__conteudo__texto {
+    font-size: 0.92rem;
+    font-family: var(--fonte-secundaria);
+}
+.sub-titulo-destaque {
+    color: var(--cor-azul);
+  }
+.panfleto__links {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+.panfleto__pagante {
+    border: 2px solid var(--cor-azul);
+    width: 75%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 0.80rem;
+    font-weight: 400;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--cor-branca);
+    font-family: var(--fonte-primaria);
+}
+.panfleto__acesso {
+    font-size: 0.92rem;
+    font-family: var(--fonte-primaria);
+    color: var(--cor-branca);
+    text-align: center;    
+}
+.panfleto__imagem {
+    width: 35%;
+}
+.panfleto__pagante:hover {
+    animation-name: botaoPulante;
+    background-color: var(--cor-azul);
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes botaoPulante{
+    0%{
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05)
+    }
+}
+.rodape {
+    padding: 10px;
+    color: var(--cor-branca);
+    text-align: center;
+    font-size: 0.92rem;
+    font-family: var(--fonte-secundaria);
+
+}
+@media (max-width: 909px){
+    .cabecalho {
+        padding: 10%;
+    }
+    .cabecalho__menu {
+        justify-content: center;
+        padding: 5%;
+    }
+    .panfleto {
+        flex-direction: column-reverse;
+    }
+    .panfleto__conteudo {
+        width: 90%;
+
+    }
+    .panfleto__pagante {
+        display: flex;
+        row-gap: 10px;
+        column-gap: 100%;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 5%;
+        animation-duration: 0.5s;
+        animation-iteration-count: none;
+        animation-direction: none;
+        animation-timing-function: none;
+    }
+    .panfleto__imagem {
+        width: 70%;
+    }
+}
